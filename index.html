@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Final Lab Task 3 - 1</title>
+    <style>
+        fieldset{
+            width: 30%;
+        }
+
+        #prods {
+            margin-left: 40px;
+        }
+
+        #l1, #l2, #l3, #l4, #cost, #fee1, #tbTax, #tax, #total, h3 {
+            display: inline-block;
+            width: 140px;
+            margin: 5px;
+        }
+
+        #space {
+            margin: 0;
+        }
+
+        #l1, #l2, #l3, #l4, h3{
+            margin-right: 100px;
+        }
+
+        h3, #total {
+            color: red;
+        }
+
+        #total {
+            font-size: larger;
+        }
+        
+        #line {
+            width: 70px; 
+            margin-left:240px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form name="form">
+            <label for="products">Basketball Products:</label>
+            <input type="text"  id="prods"  size="5">
+            <input type="button" value="-" onclick="deduct()">
+            <input type="button" value="+" onclick="add()">
+            <br>
+            <br>
+            <label for="fee">Shipping and Handling Fee:</label>
+            <input type="text" id="fee" size="5" value="4.99">
+            <br>
+            <br>
+            <!--ORDER SUMMARY-->
+            <h2>Order Summary</h2>
+            <p id="l1"> Items( <span id="item-num"></span> ): </p>
+                <p id="cost"> $0.00 </p>
+                    <p id="space"></p>
+            <p id="l2"> Shipping and Handling: </p>
+                <p id="fee1">$4.99</p>
+                    <p id="space"></p>
+                <hr id="line">
+            <p id="l3"> Total Before Tax: </p>
+                <p id="tbTax"></p>
+                    <p id="space"></p>
+            <p id="l4"> Estimated Tax (10%): </p>
+                <p id="tax"></p>
+                    <p id="space"></p>
+                <hr>
+            <h3>Order Total:</h3>
+                <p id="total">$0.00</p>
+        </form>
+    </fieldset>
+</body>
+</html>
