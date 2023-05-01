@@ -7,11 +7,13 @@ function add(){
 }
 
 function deduct(){
-    value = document.getElementById("prods").value;
-    value--;
-    document.getElementById("prods").value = value;
-    document.getElementById("item-num").textContent = value;
-    updatecost()
+    if (value > 0){
+        value = document.getElementById("prods").value;
+        value--;
+        document.getElementById("prods").value = value;
+        document.getElementById("item-num").textContent = value;
+        updatecost()
+    }
 }
 
 function updatecost(){
